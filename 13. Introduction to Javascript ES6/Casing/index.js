@@ -4,5 +4,5 @@ const output = document.getElementById('h1id');
 
 btn.addEventListener('click', () => {
     let name = input.value;
-    output.innerHTML = `Hello ${name.slice(0, 1).toUpperCase()}${name.slice(1).toLowerCase()}!`;
+    output.innerHTML = `Hello ${name.slice(0, 1).toUpperCase()}${name.slice(1,name.length).toLowerCase()}!`;
 });
