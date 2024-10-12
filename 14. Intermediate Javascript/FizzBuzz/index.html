@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizzBuzz</title>
+</head>
+<body>
+    <h1>FizzBuzz</h1>
+    <p><b>FizzBuzz</b> is a group word game for children to teach them about division. Players take turns to count incrementally, replacing any number divisible by three with the word "Fizz", and any number divisible by five with the word "Buzz".</p>
+    <p>For numbers which are multiples of both three and five, players should say "FizzBuzz".</p>
+    <hr>
+    <h2>FizzBuzz Game</h2>
+    <button id="btn">Generate Next</button>
+    <h3 id="result"></h3>
+</body>
+<!-- <script src="index.js"></script> -->
+ <script>
+    var fizzBuzz = [];
+    var count = 1;
+    const btn = document.getElementById('btn');
+    const result = document.getElementById('result');
+
+    btn.addEventListener('click', addCount);
+
+    function addCount() {
+        if (count % 3 === 0 && count % 5 === 0) {
+            fizzBuzz.push(" FizzBuzz");
+        } else if (count % 3 === 0) {
+            fizzBuzz.push(" Fizz");
+        } else if (count % 5 === 0) {
+            fizzBuzz.push(" Buzz");
+        } else {
+            fizzBuzz.push(` ${count}`);
+        }
+        count++;
+        result.innerHTML = fizzBuzz;
+    }
+ </script>
+</html>
